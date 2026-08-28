@@ -11,7 +11,16 @@ export class SipCalculator {
   monthlyAmount: number = 5000;
   investmentPeriod: number = 10;
   expectedReturnRate: number = 12;
+
+  fundName: string | null = null;
+
+  //Calculated results
   totalInvestment: number = this.monthlyAmount * this.investmentPeriod * 12;
   maturityAmount: number = 1162000;
   estimatedReturns: number = this.maturityAmount - this.totalInvestment;
+
+  //Simple calculation method
+  calculateYearlyInvestment(): number {
+    return this.monthlyAmount * 12;
+  }
 }
