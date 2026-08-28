@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <td>Investment Period:</td>
-        <th>{{ investmentPeriod }} years</th>
+        <th>{{ investmentPeriod + ' years = ' + investmentPeriod * 12 + ' months' }}</th>
       </tr>
       <tr>
         <td>Expected Annual Return:</td>
@@ -38,5 +38,19 @@
         <div class="amount">${{ maturityAmount }}</div>
       </div>
     </div>
+  </div>
+
+  <div class="additional-info">
+    <h3>Additional Information</h3>
+    <p>
+      Total months of investment: <b>{{ investmentPeriod * 12 }}</b>
+    </p>
+    <p>
+      Investment duration: <b>{{ investmentPeriod > 5 ? 'Long term' : 'Short term' }}</b>
+    </p>
+    <p>
+      Yearly investment amount: <b>${{ calculateYearlyInvestment() }}</b>
+    </p>
+    <p>Fund name length: {{ fundName?.length }}</p>
   </div>
 </div>
