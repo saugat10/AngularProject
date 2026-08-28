@@ -19,6 +19,10 @@ export class SipCalculator {
   maturityAmount: number = 1162000;
   estimatedReturns: number = this.maturityAmount - this.totalInvestment;
 
+  //for property binding examples
+  logoUrl: string = 'assets/logo.png';
+  buttonTooltip: string = 'Click to calculate SIP returns';
+
   //Simple calculation method
   calculateYearlyInvestment(): number {
     return this.monthlyAmount * 12;
